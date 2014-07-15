@@ -1,0 +1,20 @@
+import sys
+globals().update(vars(sys.modules['temperate.settings']))
+
+# Here you can override the DB settings for the environment
+# prod/staging/dev, etc
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'temperate',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+        },
+}
+
+ENVIRONMENT = "dev"
+
+SECRET_KEY = 'REPLACEMENOW'
